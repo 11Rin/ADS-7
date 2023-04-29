@@ -23,7 +23,8 @@ class TPQueue {
   T pop() {
     if (head == nullptr)
       throw std::string("Empty");
-    else {
+    else
+    {
       QItem * temp = head -> next;
       if (temp)
         temp -> prev = nullptr;
