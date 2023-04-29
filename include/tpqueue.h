@@ -21,16 +21,17 @@ class TPQueue {
 
  public:
   T pop() {
-    if (head == nullptr)
+    if (head == nullptr) {
       throw std::string("Empty");
-    else {
-      QItem * temp = head -> next;
-      if (temp)
-        temp -> prev = nullptr;
-      T data = head -> data;
-      delete head;
-      head = temp;
-      return data; }
+    } else {
+        QItem * temp = head -> next;
+        if (temp)
+          temp -> prev = nullptr;
+        T data = head -> data;
+        delete head;
+        head = temp;
+        return data; 
+      }
   }
   void push(const T& value) {
     QItem * temp = head;
