@@ -30,7 +30,7 @@ class TPQueue {
       T data = head -> data;
       delete head;
       head = temp;
-      return data;}
+      return data; }
   }
   void push(const T& value) {
     QItem * temp = head;
